@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar and Sections</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .intro .text-content {
+            max-width: 50%;
+        }
+
+        .intro .text-content h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .intro .text-content p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .intro .text-content button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .intro .image-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contact {
+            padding: 50px;
+            background-color: #e4e4e4;
+        }
+
+        .contact input {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact input:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .table-section {
+            padding: 50px;
+        }
+
+        .table-section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-section th, .table-section td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .table-section th {
+            background-color: #f4f4f4;
+        }
+
+        .table-section tfoot td {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .contact label, .contact input, .contact textarea {
+        display: block;
+        margin-bottom: 15px;
+      }
+       .login-button {
+        background-color: black;
+        border: none; /* Remove borders */
+        color: White; /* White text */
+         align:center;
+        padding: 15px 32px; /* Some padding */
+        text-align: center; /* Centered text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer; /* Mouse pointer on hover */
+    }
+    .submit-button {
+        background-color: black;
+        border: none; /* Remove borders */
+        color: White; /* White text */
+         align:center;
+        padding: 15px 32px; /* Some padding */
+        text-align: center; /* Centered text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer; /* Mouse pointer on hover */
+    }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Startup</div>
+    <ul class="nav-links">
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#table">Table</a></li>
+    </ul>
+</div>
+
+<!-- Intro Section -->
+<section id="intro" class="intro">
+    <div class="text-content">
+        <h1>Welcome to Our Startup</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="image-content">
+        <img src="jeff-bezos.png" alt="Jeff Bezos"> <!-- Replace with actual image source -->
+    </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact">
+    <button class="login-button" type="button">Login</button>
+    <h2>Contact Us</h2>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Your Name">
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" placeholder="Your Email">
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" placeholder="Subject">
+    <label for="message">Your Message:</label>
+    <textarea id="message" placeholder="Your Message" rows="4"></textarea>
+    <button class="submit-button" type="button">Submit Form</button>
+</section>
+
+<!-- Table Section -->
+<section id="table" class="table-section">
+
+    <h2>Table Example</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>SNO</th>
+            <th>Startup Name</th>
+            <th>Startup Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> 1</td>
+            <td>WowIndia</td>
+            <td>A Startup with Wow Ideas</td>
+        </tr>
+        <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+        </tr>
+        <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">Footer Content</td>
+        </tr>
+        </tfoot>
+    </table>
+</section>
+</body>
+</html>
